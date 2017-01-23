@@ -26,5 +26,8 @@ set('ssh_multiplexing', true);
 
 Also change log moved from GitHub releases pages to [CHANGELOG.md](https://github.com/deployphp/deployer/blob/master/CHANGELOG.md#v410) file.
 
+To upgrade Deployer run next command:
 
-
+```sh
+dep self-update
+```
