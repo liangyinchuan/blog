@@ -2,11 +2,11 @@
 
 New version of Deployer 4.1.0 contains a lot of improvements. 
 
-Added support for multiplexing for `NativeSsh`. This feature speed up deployment process more then 3x times for native ssh type. 
+Added support for multiplexing for `NativeSsh`. This feature speeds up deployment process more than 3x times for native ssh type. 
 
 <svg width="607" height="185" viewBox="0 0 607 185" xmlns="http://www.w3.org/2000/svg">
  <g>
-  <title>Deploymet speen up graph</title>
+  <title>Deployment speed up graph</title>
   <rect stroke="#000" id="svg_1" height="26" width="422.000015" y="23" x="37.5" stroke-width="0" fill="#529D94"/>
   <rect stroke="#000" id="svg_2" height="26" width="119.999988" y="91" x="39.5" stroke-width="0" fill="#EDB6DC"/>
   <path id="svg_3" d="m13.5,311" opacity="0.5" stroke-opacity="null" stroke-width="0" stroke="#000" fill="#619E73"/>
@@ -18,7 +18,7 @@ Added support for multiplexing for `NativeSsh`. This feature speed up deployment
  </g>
 </svg>
 
-To activate SSH multiplexing add this line to your `deploy.php` file:
+To activate SSH multiplexing, add this line to your `deploy.php` file:
 
 ```php
 set('ssh_multiplexing', true);
