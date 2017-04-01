@@ -24,7 +24,7 @@ dep init -t Laravel
 ```
 
 Command will create `deploy.php` file for *deploying Laravel*. This file called *recipe* and based on built-in recipe *laravel.php*.
-It's contains some server configuration and example task. 
+It's contains some host configuration and example task. 
 
 First, we need to configure `repository` config of our application:
 
@@ -32,23 +32,16 @@ First, we need to configure `repository` config of our application:
 set('repository', 'git@github.com:user/project.git');
 ```
 
-Second, configure server:
+Second, configure host:
  
 ```php
-server('production', 'domain.org')
-    ->user('name')
-    ->identityFile()
+host('domain.org')
     ->set('deploy_path', '/var/www/html');
 ```
 
-Best way to authenticate using key. By default `identityFile` will look for private and public keys in `~/.ssh/id_rsa` 
-and `~/.ssh/id_rsa.pub` accordingly. If you want to use different keys, or your key have password:
+Make sure what `~/.ssh/config` contains `domain.org` and you can connect to host thought ssh.
 
-```php
-identityFile('~/.ssh/id_rsa.pub', '~/.ssh/id_rsa', 'password')
-```
-
-Another important parameter it is `deploy_path`, where you project will be located on server. 
+Another important parameter it is `deploy_path`, where you project will be located on remote host. 
 
 Let's do our first deploy:
 
@@ -56,7 +49,7 @@ Let's do our first deploy:
 dep deploy
 ```
 
-If every think goes well, deployer will create next structure on server in `deploy_path`:
+If every think goes well, deployer will create next structure on remote host in `deploy_path`:
 
 ```text
 ├── .dep
