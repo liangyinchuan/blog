@@ -66,7 +66,7 @@ If every think goes well, deployer will create next structure on remote host in 
 * `current` is symlink to last release,
 * `.dep` dir contains special metadata for deployer (releases log, `deploy.log` file, etc).
 
-Configure you server to serve files from `current`. For example if you are using nginx next:
+Configure your server to serve files from the `current` folder. For example if you are using nginx next:
 
 ```config
 server {
@@ -81,13 +81,13 @@ server {
 }
 ```
 
-Now you will be able to serve you **laravel project**:
+Now you will be able to serve your **laravel project**:
 
 <div style="text-align: center; margin: 50px 0;">
     <img src="/images/screenshot/laravel.png" alt="Deploy Laravel Application" style="width: 60%; box-shadow: 0px 10px 30px rgba(128, 128, 128, 0.52);">
 </div>
 
-If you want to automatically migrate database, *Laravel* recipe ships with `artisan:migrate` task. Add this lines to your `deploy.php`:
+If you want to automatically migrate database, *Laravel* recipe ships with the `artisan:migrate` task. Add this line to your `deploy.php`:
 
 ```php
 after('deploy:update_code', 'artisan:migrate');
