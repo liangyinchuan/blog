@@ -7,9 +7,9 @@
 
 Apparently you already have some **Laravel application** and some **server** or **shared hosting**. 
 Now you need to automate the process of **deployment**. 
-Deployer will helps you in this as it ships with some ready to use recipes for **Laravel** based application. 
+Deployer will help you in this as it ships with some ready to use recipes for **Laravel** based application. 
 
-Let's start with [installation](/docs/installation) of Deployer. Run next commands in terminal: 
+Let's start with [installation](/docs/installation) of Deployer. Run the following commands in terminal: 
 
 ```sh
 curl -LO https://deployer.org/deployer.phar
@@ -23,7 +23,7 @@ Next, in your projects directory run:
 dep init -t Laravel
 ```
 
-Command will create `deploy.php` file for *deploying Laravel*. This file called *recipe* and based on built-in recipe *laravel.php*.
+The above command will create `deploy.php` file for *deploying Laravel*. This file called *recipe* and based on built-in recipe *laravel.php*.
 It's contains some host configuration and example task. 
 
 First, we need to configure `repository` config of our application:
